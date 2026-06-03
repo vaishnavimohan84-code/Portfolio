@@ -236,46 +236,99 @@ nav a:hover { color: var(--blue); }
 }
 
 
-.skill-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+/* Skills Section */
+#skills {
+  padding: 60px 40px;
+  background: #f0f4ff;
 }
-.skill-card {
-  background: white;
-  padding: 28px;
-  border-radius: 14px;
-  box-shadow: var(--shadow);
-}
-.skill-card h3 {
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 2px;
+
+.skills-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #3b5bdb;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--blue);
-  margin-bottom: 16px;
+  margin: 0 0 8px;
 }
-.skill-card ul { list-style: none; }
-.skill-card ul li {
-  padding: 8px 0;
-  border-bottom: 1px solid #f1f5f9;
-  font-size: 14px;
-  color: #475569;
+
+.skills-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: #3b5bdb;
+  font-family: Georgia, serif;
+  margin: 0 0 10px;
+}
+
+.skills-underline {
+  width: 40px;
+  height: 3px;
+  background: #3b5bdb;
+  margin-bottom: 36px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Card */
+.skill-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 28px 32px;
+  box-shadow: 0 2px 16px rgba(59, 91, 219, 0.08);
+}
+
+.skill-card-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #3b5bdb;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+
+/* List */
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.skill-list li {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  color: #1a1a2e;
+  font-size: 15px;
 }
-.skill-card ul li::before {
-  content: '';
-  width: 6px;
-  height: 6px;
+
+.dot {
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: var(--blue);
+  background: #3b5bdb;
   flex-shrink: 0;
 }
-.skill-card ul li:last-child { border-bottom: none; }
 
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
 
+  #skills {
+    padding: 40px 20px;
+  }
+
+  .skills-title {
+    font-size: 32px;
+  }
+}
 .project-card {
   background: white;
   border-radius: 16px;
