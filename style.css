@@ -125,15 +125,14 @@ nav a:hover { color: var(--blue); }
   height: 220px;
 }
 
-.profile-img {
+..profile-img {
   width: 220px;
   height: 220px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center top;
-  position: relative;
-  z-index: 1;
-  border: 5px solid white;
+  object-position: center;
+  border: 5px solid #fff;
+  box-shadow: 0 8px 25px rgba(37,99,235,0.2);
 }
 
 .section { padding: 75px 8%; }
@@ -238,7 +237,7 @@ nav a:hover { color: var(--blue); }
 
 /* Skills Section */
 #skills {
-  padding: 60px 40px;
+  padding: 36px 36px;
   background: #f0f4ff;
 }
 
@@ -267,17 +266,18 @@ nav a:hover { color: var(--blue); }
 }
 
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px; /* Same spacing as project cards */
+    margin-top: 10px;
 }
 
 /* Card */
-.skill-card {
-  background: #fff;
-  border-radius: 14px;
-  padding: 28px 32px;
-  box-shadow: 0 2px 16px rgba(59, 91, 219, 0.08);
+.s.skill-card {
+  background: white;
+  border-radius: 16px;
+  padding: 36px;
+  box-shadow: var(--shadow);
 }
 
 .skill-card-title {
@@ -506,16 +506,15 @@ nav a:hover { color: var(--blue); }
 }
 .contact-item i { color: var(--blue); font-size: 18px; }
 .socials { margin-top: 24px; display: flex; justify-content: center; gap: 16px; }
-.socials a {
+..socials a {
   width: 46px;
   height: 46px;
   border-radius: 50%;
   background: var(--blue);
-  color: white;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
   text-decoration: none;
   transition: all 0.3s;
 }
